@@ -1,7 +1,7 @@
 # 2. Multi-objective BO: Optimizing Epoxy Formulations
 
 Perform multi-objective optimization to simultaneously optimize tensile strength
-and glass transition temperature of an epoxy formulation.
+and glass transition temperature of a sustainability-focused epoxy formulation.
 
 ## The Assigment
 
