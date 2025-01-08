@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "1. Optimization Setup",
+      "setup": "pip install -r requirements.txt",
+      "run": "pytest test_multi_objective.py::test_optimization_setup test_multi_objective.py::test_parameter_constraints -v",
+      "points": 2
+    },
+    {
+      "name": "2. Maximum Solutions",
+      "setup": "pip install -r requirements.txt",
+      "run": "pytest test_multi_objective.py::test_max_strength_params test_multi_objective.py::test_max_glass_t_params test_multi_objective.py::test_max_values -v",
+      "points": 2
+    },
+    {
+      "name": "3. Sustainability Analysis",
+      "setup": "pip install -r requirements.txt",
+      "run": "pytest test_multi_objective.py::test_pareto_optimal_count test_multi_objective.py::test_sustainable_solutions -v",
+      "points": 2
+    },
+    {
+      "name": "4. Threshold Implementation",
+      "setup": "pip install -r requirements.txt",
+      "run": "pytest test_multi_objective.py::test_threshold_constraints test_multi_objective.py::test_threshold_optimization -v",
+      "points": 2
+    },
+    {
+      "name": "5. Trade-off Analysis",
+      "setup": "pip install -r requirements.txt",
+      "run": "pytest test_multi_objective.py::test_tradeoff_calculation test_multi_objective.py::test_pareto_front_analysis -v",
+      "points": 2
+    }
+  ]
+}

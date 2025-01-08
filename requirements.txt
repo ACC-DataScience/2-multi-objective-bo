@@ -1,4 +1,6 @@
--e . # package from this repo
-ax-platform
-matplotlib
-pytest
+honegumi==0.2.0
+numpy==1.24.3
+pytest==7.3.1
+pytest-cov==4.1.0
+black==23.3.0
+isort==5.12.0
