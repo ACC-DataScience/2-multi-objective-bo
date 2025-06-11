@@ -44,7 +44,7 @@ weight fraction of all components must sum to 1.0.
 
 Your task is to use Honegumi to develop an optimization script to help you identify a
 set of pareto optimal parameters that balance the tradeoff between the tensile
-strength and yield strength of an epoxy materail. Your experimental budget is
+strength and yield strength of an epoxy material. Your experimental budget is
 limited to 40 experiments. A synthetic objective function has been provided that will
 serve as a proxy for real experimental measurements. The individual tasks for this assignment are listed below along with some helpful tips and guides for how to approach the problem.
 
@@ -56,12 +56,12 @@ In this problem you are expected to use [Honegumi](https://honegumi.readthedocs.
 
 > **Note:** In this assignment, we will be performing the optimization loop twice and have given the ax_client a unique name during the first part to differentiate it.
 
-To complete this problem, you are given access to a synthetic objective function that will be used as a proxy for real experimental observations called `measure_epoxy()`, which is stored in the `./utils.py` file. This function takes in six variables: `E_A`, `E_B`, `E_C`, `A_A`, `A_B`, `A_C` and returns the measured tensile strenght and glass transition temperature of the epoxy. These are the parameters you should specify when setting up your optimization problem.
+To complete this problem, you are given access to a synthetic objective function that will be used as a proxy for real experimental observations called `measure_epoxy()`, which is stored in the `./utils.py` file. This function takes in six variables: `E_A`, `E_B`, `E_C`, `A_A`, `A_B`, `A_C` and returns the measured tensile strength and glass transition temperature of the epoxy. These are the parameters you should specify when setting up your optimization problem.
 
 #### **TASK B:** Report solutions that maximize each individual objective.
 
-Now that you have completed the optimization, you can visuaize the pareto optimal 
-solutions using the visualization tools provided in Honegumi. Note that indiviual
+Now that you have completed the optimization, you can visualize the pareto optimal 
+solutions using the visualization tools provided in Honegumi. Note that individual
 objectives are maximized at either end of the pareto front. Assign the parameters for
 the solution with the highest strength value as a dictionary to a variable named
 `max_strength_params` and the parameters for the solution with the highest glass
@@ -100,7 +100,7 @@ targets. Assign these values to the variables `num_pareto_optimal_thresh` and
 ### **TASK F:** Compute the tradeoff between strength and glass transition temperature.
 
 Within the threshold of interest, how many degrees of glass transition temperature do 
-we need to give up in order to increse our strength by 1 MPa? Assume that the pareto 
+we need to give up in order to increase our strength by 1 MPa? Assume that the pareto 
 front is sufficiently linear in this region such that you can approximate the tradeoff
 as the slope of a linear fit. Assign the tradeoff to a variable named `tradeoff`.
 
