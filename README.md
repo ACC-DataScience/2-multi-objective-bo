@@ -4,7 +4,7 @@
 Perform multi-objective optimization to simultaneously optimize tensile strength
 and glass transition temperature of a sustainability-focused epoxy formulation.
 
-##�� The Assignment
+## The Assignment
 
 ### 🎯 Task Context
 
@@ -56,7 +56,7 @@ In this problem you are expected to use [Honegumi](https://honegumi.readthedocs.
 
 > **Note:** In this assignment, we will be performing the optimization loop twice and have given the ax_client a unique name during the first part to differentiate it.
 
-To complete this problem, you are given access to a synthetic objective function that will be used as a proxy for real experimental observations called `measure_epoxy()`, which is stored in the `./utils.py` file. This function takes in six variables: `E_A`, `E_B`, `E_C`, `A_A`, `A_B`, `A_C` and returns the measured tensile strength and glass transition temperature of the epoxy. These are the parameters you should specify when setting up your optimization problem.
+To complete this problem, you are given access to a synthetic objective function that will be used as a proxy for real experimental observations called `measure_epoxy()`, which is stored in the `./utils.py` file. This function takes in six variables: `EA`, `EB`, `EC`, `AA`, `AB`, `AC` and returns the measured tensile strength and glass transition temperature of the epoxy. These are the parameters you should specify when setting up your optimization problem.
 
 #### **TASK B:** Report solutions that maximize each individual objective.
 
@@ -78,7 +78,8 @@ solutions found on the pareto front to it. Next, create a variable called
 biocontent greater than 20 to it. The weighted biocontent is simply the sum of the 
 biocontents of each component weighted by their mass fraction. 
 
-Given an epoxy formulation and the biocontents given above. The biocontent of the formulation is calculated as:
+Given an epoxy formulation and the biocontents given above. The biocontent of the formulation is calculated as:  
+biocontent = EA * 17 + EB * 20 + EC * 30 + AA * 10 + AB * 50 + AC * 25
 
 ### **TASK D:** Apply custom thresholds to the optimization problem.
 
