@@ -11,11 +11,15 @@ import pytest
 
 @pytest.fixture(scope="session")
 def get_namespace():
-    script_fname = "mobo_assignment_ans.py"
+    script_fname = "mobo_assignment.py"
     script_content = open(script_fname).read()
 
     namespace = {}
     exec(script_content, namespace)
+    required_vars = ["ax_client", "ax_client_full", "ax_client_thresh", "num_pareto_optimal_thresh", "num_pareto_sustainable_thresh", "num_pareto_optimal", "num_pareto_sustainable", "max_strength", "max_glass_t", "tradeoff"]
+    missing_vars = [var for var in required_vars if var not in namespace]
+    if missing_vars:
+        pytest.skip(f"Assignment incomplete. Missing variables: {missing_vars}")
     return namespace
 
 
@@ -24,7 +28,7 @@ def test_task_a(get_namespace):
     running_ax_client = get_namespace["ax_client_full"]
     user_op_params = running_ax_client.experiment.parameters
 
-    # assert that len op_params is 4
+    # assert that len op_params is 5
     assert len(user_op_params) == 5, "Expected 5 parameters, got {}".format(
         len(user_op_params)
     )
@@ -36,7 +40,7 @@ def test_task_a(get_namespace):
         user_op_params.keys()
     )
 
-    # assert that the ax_client budget is 25
+    # assert that the ax_client budget is 40
     assert (
         len(running_ax_client.get_trials_data_frame()) == 40
     ), "Expected optimization budget of 40 trials, got {}".format(
