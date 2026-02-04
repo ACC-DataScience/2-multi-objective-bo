@@ -3,7 +3,7 @@
 Perform multi-objective optimization to simultaneously optimize tensile strength
 and glass transition temperature of a sustainability-focused epoxy formulation.
 
-##�� The Assignment
+## The Assignment
 
 ### 🎯 Task Context
 
@@ -114,3 +114,4 @@ See `postCreateCommand` from [`devcontainer.json`](.devcontainer/devcontainer.js
 
 ## Notes
 - pip's install path is not included in the PATH var by default, so without installing via `sudo -H`, pytest would be unaccessible.
+
